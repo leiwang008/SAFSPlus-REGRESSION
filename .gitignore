@@ -1,0 +1,5 @@
+# Class files in Eclipse
+*.class
+
+# folder holding generated class files
+/bin

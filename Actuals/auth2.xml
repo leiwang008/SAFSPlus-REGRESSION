@@ -1,0 +1,24 @@
+<OAuth2 classname="org.safs.auth.OAuth2">
+    <AuthorizationServer classname="org.safs.auth.AuthorizationServer">
+        <authCodeResource>oauth/authorize</authCodeResource>
+        <authTokenResource>oauth/token</authTokenResource>
+        <baseServiceName>login</baseServiceName>
+        <protocol>http</protocol>
+        <host>oauth2.token.server</host>
+        <port>8080</port>
+    </AuthorizationServer>
+
+    <Content classname="org.safs.auth.Content">
+        <accessToken>FLWO903LSOZE834AL</accessToken>
+        <accessTokenSecret>123456</accessTokenSecret>
+        <accessTokenType>bearer</accessTokenType>
+        <clientID>AKELRE3490AFAJKK234</clientID>
+        <clientSecret>abc123</clientSecret>
+        <refreshToken>JDEUPZERWEVNBHQEER=AA</refreshToken>
+    </Content>
+
+    <SimpleAuth classname="org.safs.auth.SimpleAuth">
+        <password>unitA123</password>
+        <userName>Mark</userName>
+    </SimpleAuth>
+</OAuth2>

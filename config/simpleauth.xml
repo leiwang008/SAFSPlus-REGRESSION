@@ -1,0 +1,4 @@
+<SimpleAuth package="org.safs.auth">
+    <password>unitA123</password>
+    <userName>Mark</userName>
+</SimpleAuth>

@@ -1,0 +1,254 @@
+Version 1.1
+Log OPENED 01-03-2017 14:13:25
+          'Expressions' set to 'TRUE'
+          AppMapChaining ON successful.
+          AppMapResolve ON successful.
+          Application Map set to 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Maps\REGRESSIONApp.map'
+          Application Map set to 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Maps\REGRESSIONApp_en.map'
+          Application Map set to 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Maps\TC_JavaDemo.Map'
+           
+  >>>>>>  START SUITE Regression
+  >>>>>>  START STATUS COUNTER TIDRESTTests
+  >>>>>>  START STATUS COUNTER TIDRESTTests.testAPI
+  >>>>>>  START STATUS COUNTER TIDRESTTests.testAPI.testRESTAPIs
+          Application Map set to 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Maps\Rest.Map'
+    OK    SAFSREST:BAYERSERVICE001 RestStartServiceSession successful.
+    OK    SAFSREST:BAYERSERVICE001 RestGetXML successful.
+          relativeURI: /CUSTOMER/
+BayerCustomerGet.Response: SAFSREST_response_1483424014860
+    OK    RestCleanResponseMap successful.
+          Objects have been removed from cache map.
+**FAILED**RestStoreResponse was not successful.
+          Error at line 107 in file regression.testcases.TIDRESTTests#testRESTAPIs() : Object identified by SAFSREST_response_1483424014860 was not found.
+          BayerCustomerGet.Var.Response.EntityBody=
+          BayerCustomerGet.Var.Response.Request=
+          BayerCustomerGet.Var.Response.HttpVersion=
+          BayerCustomerGet.Var.Response.StatusCode=
+          BayerCustomerGet.Var.Response.Headers=
+          BayerCustomerGet.Var.Response.StatusLine=
+          BayerCustomerGet.Var.Response.ReasonPhrase=
+          BayerCustomerGet.Var.Response.MessageBody=
+          BayerCustomerGet.Var.Response.ID=
+          BayerCustomerGet.Var.Response.ContentType=
+          BayerCustomerGet.Var.Response.EntityLength=
+**FAILED**RestDeleteResponse was not successful.
+          Error at line 114 in file regression.testcases.TIDRESTTests#testRESTAPIs() : Object identified by SAFSREST_response_1483424014860 was not found.
+    OK    SAFSREST:BAYERSERVICE001 RestGetXML successful.
+          relativeURI: /CUSTOMER/
+BayerCustomerGet.Response: SAFSREST_response_1483424034948
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' has been saved to variables prefixed with 'BayerCustomerGet.Var'
+          BayerCustomerGet.Var.Response.EntityBody=<?xml version="1.0"?><CUSTOMERList xmlns:xlink="http://www.w3.org/1999/xlink">
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/0/">0</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/1/">1</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/2/">2</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/3/">3</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/4/">4</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/5/">5</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/6/">6</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/7/">7</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/8/">8</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/9/">9</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/">10</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/11/">11</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/12/">12</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/13/">13</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/14/">14</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/15/">15</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/16/">16</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/17/">17</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/18/">18</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/19/">19</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/20/">20</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/21/">21</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/22/">22</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/23/">23</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/24/">24</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/25/">25</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/26/">26</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/27/">27</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/28/">28</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/29/">29</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/30/">30</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/31/">31</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/32/">32</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/33/">33</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/34/">34</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/35/">35</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/36/">36</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/37/">37</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/38/">38</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/39/">39</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/40/">40</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/41/">41</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/42/">42</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/43/">43</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/44/">44</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/45/">45</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/46/">46</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/47/">47</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/48/">48</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/49/">49</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/1111/">1111</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/2000/">2000</CUSTOMER>
+    <CUSTOMER xlink:href="http://www.thomas-bayer.com/sqlrest/CUSTOMER/5555/">5555</CUSTOMER>
+</CUSTOMERList>
+          BayerCustomerGet.Var.Response.Request=
+          BayerCustomerGet.Var.Response.HttpVersion=UNKNOWN
+          BayerCustomerGet.Var.Response.StatusCode=200
+          BayerCustomerGet.Var.Response.Headers={Date=Tue, 03 Jan 2017 06:13:49 GMT, Content-Length=4856, Via=1.1 inetgw37 (squid), Connection=keep-alive, Content-Type=application/xml, X-Cache=MISS from inetgw37, Server=Apache-Coyote/1.1}
+          BayerCustomerGet.Var.Response.StatusLine=UNKNOWN
+          BayerCustomerGet.Var.Response.ReasonPhrase=UNKNOWN
+          BayerCustomerGet.Var.Response.MessageBody=UNKNOWN
+          BayerCustomerGet.Var.Response.ID=SAFSREST_response_1483424034948
+          BayerCustomerGet.Var.Response.ContentType=application/xml
+          BayerCustomerGet.Var.Response.EntityLength=0
+    OK    RestDeleteResponse successful.
+          Variables prefixed with 'BayerCustomerGet.Var' have been deleted.
+
+          BayerCustomerGet.Var.Response.EntityBody=
+          BayerCustomerGet.Var.Response.Request=
+          BayerCustomerGet.Var.Response.HttpVersion=
+          BayerCustomerGet.Var.Response.StatusCode=
+          BayerCustomerGet.Var.Response.Headers=
+          BayerCustomerGet.Var.Response.StatusLine=
+          BayerCustomerGet.Var.Response.ReasonPhrase=
+          BayerCustomerGet.Var.Response.MessageBody=
+          BayerCustomerGet.Var.Response.ID=
+          BayerCustomerGet.Var.Response.ContentType=
+          BayerCustomerGet.Var.Response.EntityLength=
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' has been saved to 'BayerCustomerGet.Response.XML'
+          CopyFile performed on D:\Eclipse\workspacePLUGIN\SAFS_Regression\Actuals\BayerCustomerGet.Response.XML; output file 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Benchmarks\BayerCustomerGet.Response.XML'.
+**FAILED**RestVerifyResponse was not successful.
+SAFSException:Failed to create JSONObject failure in table regression.testcases.TIDRESTTests#testRESTAPIs() at line 147.
+          C,RestVerifyResponse,SAFSREST_response_1483424034948,BayerCustomerGet.Response.XML
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.XML'.
+**FAILED**RestVerifyResponse was not successful.
+          Error at line 156 in file regression.testcases.TIDRESTTests#testRESTAPIs() : Object identified by 'SAFSREST_response_1483424034948' failed to match with 'BayerCustomerGet.Response.XML'.
+Missing fields in benchmark file:
+[Response.Request, Response.Request.Headers, Response.Request.HttpVersion, Response.Request.MessageBody, Response.Request.Method, Response.Request.URI]
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.XML'.
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' has been saved to 'BayerCustomerGet.Response.XML'
+          CopyFile performed on D:\Eclipse\workspacePLUGIN\SAFS_Regression\Actuals\BayerCustomerGet.Response.XML; output file 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Benchmarks\BayerCustomerGet.Response.XML'.
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.XML'.
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.XML'.
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.XML'.
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.XML'.
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' has been saved to 'BayerCustomerGet.Response.PROPERTIES'
+          CopyFile performed on D:\Eclipse\workspacePLUGIN\SAFS_Regression\Actuals\BayerCustomerGet.Response.PROPERTIES; output file 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Benchmarks\BayerCustomerGet.Response.PROPERTIES'.
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.PROPERTIES'.
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.PROPERTIES'.
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.PROPERTIES'.
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.PROPERTIES'.
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' has been saved to 'BayerCustomerGet.Response_2.JSON'
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' has been saved to 'BayerCustomerGet.Response.JSON'
+          CopyFile performed on D:\Eclipse\workspacePLUGIN\SAFS_Regression\Actuals\BayerCustomerGet.Response.JSON; output file 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Benchmarks\BayerCustomerGet.Response.JSON'.
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.JSON'.
+    OK    RestVerifyResponse successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.JSON'.
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.JSON'.
+    OK    RestVerifyResponseContains successful.
+          Object identified by 'SAFSREST_response_1483424034948' matched with 'BayerCustomerGet.Response.JSON'.
+    OK    SAFSREST:BAYERSERVICE001 RestRequest PUT successful.
+          relativeURI: 0/
+BayerProductPut.Response: SAFSREST_response_1483424038052
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424038052' has been saved to variables prefixed with 'BayerProductPut.Var'
+    OK    SAFSREST:BAYERSERVICE001 RestHeadXML successful.
+          relativeURI: /CUSTOMER/
+BayerCustomerHeader.Response: SAFSREST_response_1483424038950
+    OK    RestStoreResponse successful.
+          Object identified by 'SAFSREST_response_1483424038950' has been saved to 'BayerCustomerHeader.Response.JSON'
+    OK    SAFSREST:BAYERSERVICE001 RestEndServiceSession successful.
+          Application Map 'D:\Eclipse\workspacePLUGIN\SAFS_Regression\Maps\Rest.Map' closed.
+  <<<<<<  STOP STATUS COUNTER TIDRESTTests.testAPI.testRESTAPIs
+          Stored status counter "TIDRESTTests.testAPI.testRESTAPIs" into base variable "TIDRESTTests.testAPI.testRESTAPIs".
+REPORT     BEGIN STATUS: TIDRESTTests.testAPI.testRESTAPIs
+REPORT    TOTAL RECORDS: 74
+REPORT  SKIPPED RECORDS: 0
+           
+REPORT     TEST RECORDS: 6
+REPORT    TEST FAILURES: 0
+REPORT    TEST WARNINGS: 0
+REPORT     TESTS PASSED: 6
+           
+REPORT  GENERAL RECORDS: 68
+REPORT GENERAL FAILURES: 4
+REPORT GENERAL WARNINGS: 0
+REPORT   GENERAL PASSES: 64
+REPORT      IO FAILURES: 0
+REPORT       END STATUS: TIDRESTTests.testAPI.testRESTAPIs
+    OK    TIDRESTTests.testAPI.testRESTAPIs did not report any UNEXPECTED test failures!
+  <<<<<<  STOP STATUS COUNTER TIDRESTTests.testAPI
+          Stored status counter "TIDRESTTests.testAPI" into base variable "TIDRESTTests.testAPI".
+REPORT     BEGIN STATUS: TIDRESTTests.testAPI
+REPORT    TOTAL RECORDS: 79
+REPORT  SKIPPED RECORDS: 0
+           
+REPORT     TEST RECORDS: 6
+REPORT    TEST FAILURES: 0
+REPORT    TEST WARNINGS: 0
+REPORT     TESTS PASSED: 6
+           
+REPORT  GENERAL RECORDS: 73
+REPORT GENERAL FAILURES: 4
+REPORT GENERAL WARNINGS: 0
+REPORT   GENERAL PASSES: 69
+REPORT      IO FAILURES: 0
+REPORT       END STATUS: TIDRESTTests.testAPI
+    OK    TIDRESTTests.testAPI did not report any UNEXPECTED test failures!
+  <<<<<<  STOP STATUS COUNTER TIDRESTTests
+          Stored status counter "TIDRESTTests" into base variable "TIDRESTTests".
+REPORT     BEGIN STATUS: TIDRESTTests
+REPORT    TOTAL RECORDS: 84
+REPORT  SKIPPED RECORDS: 0
+           
+REPORT     TEST RECORDS: 6
+REPORT    TEST FAILURES: 0
+REPORT    TEST WARNINGS: 0
+REPORT     TESTS PASSED: 6
+           
+REPORT  GENERAL RECORDS: 78
+REPORT GENERAL FAILURES: 4
+REPORT GENERAL WARNINGS: 0
+REPORT   GENERAL PASSES: 74
+REPORT      IO FAILURES: 0
+REPORT       END STATUS: TIDRESTTests
+    OK    TIDRESTTests did not report any UNEXPECTED test failures!
+    OK    Regression did not report any UNEXPECTED test failures!
+  <<<<<<  STOP SUITE  Regression
+           
+REPORT     BEGIN STATUS: Regression
+REPORT    TOTAL RECORDS: 90
+REPORT  SKIPPED RECORDS: 0
+           
+REPORT     TEST RECORDS: 6
+REPORT    TEST FAILURES: 0
+REPORT    TEST WARNINGS: 0
+REPORT     TESTS PASSED: 6
+           
+REPORT  GENERAL RECORDS: 84
+REPORT GENERAL FAILURES: 4
+REPORT GENERAL WARNINGS: 0
+REPORT   GENERAL PASSES: 80
+REPORT      IO FAILURES: 0
+REPORT       END STATUS: Regression
+           
+Log CLOSED 01-03-2017 14:13:59

@@ -1,0 +1,82 @@
+<HTML xmlns="http://www.w3.org/TR/REC-html40">
+<SCRIPT language="JavaScript">        
+        function getTestName() {
+	      var uri = new String(document.location);
+	      var index = uri.lastIndexOf("/");
+	      var test = uri.substring(index +1, uri.length);
+	      var index = test.indexOf(".");
+	      return test.substring(0, index);
+        } 
+    </SCRIPT>
+<HEAD>
+<SCRIPT language="JavaScript">
+                document.write("<TITLE>"+ getTestName() +" Failed Test Results</TITLE>");
+            </SCRIPT>
+</HEAD>
+<BODY>
+<SCRIPT language="JavaScript">
+            document.write("<H2>Test: "+ getTestName() +"</H2>");
+        </SCRIPT>
+        Report Generated: 
+            <SCRIPT language="JavaScript">
+                document.write(document.lastModified);
+            </SCRIPT>
+<HR/>
+<TABLE>
+<TR>
+<TD>Test Start: </TD>
+<TD>
+<B>14:13:25&nbsp;&nbsp;</B>01-03-2017</TD>
+</TR>
+<TR>
+<TD>Test Finished: </TD>
+<TD>
+<B>14:13:59&nbsp;&nbsp;</B>01-03-2017</TD>
+</TR>
+</TABLE>
+<H4>
+<font color="red">Go back </font> the <a href="./Regression_Summary.htm"> Testing Summary Reports. </a>
+</H4>
+<hr/>
+<div style="color: white; background-color: #33ccff; font-size: 18px; font-weight: 400">
+<H3>Logged Failures:</H3>
+</div>
+<TABLE cellpadding="5" border="2">
+<TR>
+<TD>
+<PRE>
+    RestStoreResponse was not successful.
+    Error at line 107 in file regression.testcases.TIDRESTTests#testRESTAPIs() : Object identified by SAFSREST_response_1483424014860 was not found.
+</PRE>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>
+    RestDeleteResponse was not successful.
+    Error at line 114 in file regression.testcases.TIDRESTTests#testRESTAPIs() : Object identified by SAFSREST_response_1483424014860 was not found.
+</PRE>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>
+    RestVerifyResponse was not successful.
+SAFSException:Failed to create JSONObject failure in table regression.testcases.TIDRESTTests#testRESTAPIs() at line 147.
+    C,RestVerifyResponse,SAFSREST_response_1483424034948,BayerCustomerGet.Response.XML
+</PRE>
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>
+    RestVerifyResponse was not successful.
+    Error at line 156 in file regression.testcases.TIDRESTTests#testRESTAPIs() : Object identified by 'SAFSREST_response_1483424034948' failed to match with 'BayerCustomerGet.Response.XML'.
+Missing fields in benchmark file:
+[Response.Request, Response.Request.Headers, Response.Request.HttpVersion, Response.Request.MessageBody, Response.Request.Method, Response.Request.URI]
+</PRE>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

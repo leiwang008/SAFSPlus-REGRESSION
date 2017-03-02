@@ -1,0 +1,28 @@
+[JavaDemo]
+JavaDemo=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0)
+# JavaDemo=Name=SwingObject("JFrame", "Swing Application", 0)
+
+MortBtn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingAppToolBar", "", 0).SwingObject("JButton", "Mort.Calc", 0)
+
+
+BascBtn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingAppToolBar", "", 0).SwingObject("JButton", "Basc.Comp", 1)
+# BascBtn=Name=SwingObject("JButton", "Basc.Comp", 1)
+
+Password=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("jPasswordField1")
+
+Combobox=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("JComboBox", "", 0)
+# Combobox=Name=SwingObject("JComboBox", "", 0)
+
+RadioBtn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("JRadioButton", "jRadioButton1", 0)
+CheckBox=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("JCheckBox", "jCheckBox1", 0)
+ToggleBtn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("JToggleButton", "JToggleButton1", 0)
+Btn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("JButton", "jButton1", 0)
+Label=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "Basc.Comp", 0).SwingObject("BasicComponents", "", 0).SwingObject("JLabel", "My JLabel", 0)
+
+
+
+TreeBtn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingAppToolBar", "", 0).SwingObject("JButton", "JTree", 3)
+
+TableBtn=Sys.Process("javaw").SwingObject("JFrame", "Swing Application", 0).SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingAppToolBar", "", 0).SwingObject("JButton", "JTable", 5)
+
+DataGrid=Sys.Process("javaw").SwingObject("JFrame", "Swing Application").SwingObject("JRootPane", "", 0).SwingObject("null.layeredPane").SwingObject("null.contentPane").SwingObject("SwingApp", "*", 0).SwingObject("JTablePanel4", "", 0).SwingObject("JScrollPane", "", 0).SwingObject("JViewport", "", 0).SwingObject("JTable", "", 0)

@@ -1,0 +1,18 @@
+<OAuth2 package="org.safs.auth" >
+    <simpleAuth classname="org.safs.auth.SimpleAuth">
+        <userName>xxxxxx</userName>
+        <password>******</password>
+    </simpleAuth>
+    <content classname="org.safs.auth.Content">
+        <clientID>applicationID</clientID>
+        <clientSecret>applicationPassword</clientSecret>
+    </content>
+    <AuthorizationServer classname="org.safs.auth.AuthorizationServer">
+        <authCodeResource>oauth/authorize</authCodeResource>
+        <authTokenResource>oauth/token</authTokenResource>
+        <baseServiceName>login</baseServiceName>
+        <protocol>http</protocol>
+        <host>oauth2.authorization.server</host>
+        <port>8080</port>
+    </AuthorizationServer>
+</OAuth2>

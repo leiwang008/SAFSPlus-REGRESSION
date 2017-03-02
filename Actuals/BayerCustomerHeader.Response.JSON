@@ -1,0 +1,22 @@
+{
+"Response" : {
+"ContentType" : "UNKNOWN",
+"EntityBody" : "UNKNOWN",
+"EntityLength" : "0",
+"Headers" : "{Date=Tue, 03 Jan 2017 06:13:53 GMT, Content-Length=0, Via=1.1 inetgw37 (squid), Connection=keep-alive, Content-Type=application/xml, X-Cache=MISS from inetgw37, Server=Apache-Coyote/1.1}",
+"HttpVersion" : "UNKNOWN",
+"ID" : "SAFSREST_response_1483424038950",
+"MessageBody" : "UNKNOWN",
+"ReasonPhrase" : "UNKNOWN",
+"Request" : {
+"Headers" : "Content-Type:text/xml\nAccept:text/xml\n",
+"HttpVersion" : "HTTP/1.1",
+"MessageBody" : "UNKNOWN",
+"Method" : "HEAD",
+"URI" : "http://www.thomas-bayer.com/sqlrest///CUSTOMER/"
+}
+,
+"StatusCode" : "200",
+"StatusLine" : "UNKNOWN"
+}
+}

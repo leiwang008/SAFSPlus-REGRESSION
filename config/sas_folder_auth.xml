@@ -11,8 +11,6 @@
         <authCodeResource>oauth/authorize</authCodeResource>
         <authTokenResource>oauth/token</authTokenResource>
         <baseServiceName>login</baseServiceName>
-        <protocol>http</protocol>
-        <host>oauth2.authorization.server</host>
-        <port>8080</port>
+        <rootUrl>http://oauth2.authorization.server:8080</rootUrl>
     </AuthorizationServer>
 </OAuth2>

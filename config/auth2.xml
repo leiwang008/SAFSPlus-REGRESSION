@@ -3,9 +3,7 @@
 		<authCodeResource>oauth/authorize</authCodeResource>
 		<authTokenResource>oauth/token</authTokenResource>
 		<baseServiceName>login</baseServiceName>
-		<protocol>http</protocol>
-		<host>oauth2.token.server</host>
-		<port>8080</port>
+		<rootUrl>http://oauth2.authorization.server:8080</rootUrl>
 	</AuthorizationServer>
 
 	<Content classname="org.safs.auth.Content">

@@ -1,0 +1,28 @@
+{
+	"OAuth2" : {
+		"$classname" : "org.safs.auth.OAuth2",
+		"AuthorizationServer" : {
+			"$classname" : "org.safs.auth.AuthorizationServer",
+			"authCodeResource" : "oauth/authorize",
+			"authTokenResource" : "oauth/token",
+			"baseServiceName" : "login",
+			"rootUrl" : "http://oauth2.authorization.server:8080"
+		}
+		,
+		"Content" : {
+			"$classname" : "org.safs.auth.Content",
+			"accessToken" : "HARHA34HAZFUREHFDAEIPOZ=D",
+			"accessTokenSecret" : "123456",
+			"accessTokenType" : "bearer",
+			"clientID" : "AKELRE3490AFAJKK234",
+			"clientSecret" : "abc123",
+			"refreshToken" : "JDEUPZERWEVNBHQEER=AA"
+		}
+		,
+		"SimpleAuth" : {
+			"$classname" : "org.safs.auth.SimpleAuth",
+			"password" : "unitA123",
+			"userName" : "Mark"
+		}
+	}
+}

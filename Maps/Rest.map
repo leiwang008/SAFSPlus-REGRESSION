@@ -1,0 +1,59 @@
+[ApplicationConstants]
+URL_BAYER_SQLREST="http://www.thomas-bayer.com/sqlrest/"
+PROCUCT_N=61
+
+PATH_CUSTOMER="/CUSTOMER/"
+PATH_PRODUCT_N="PRODUCT/{^PROCUCT_N}/"
+
+CUSTOMER_GET="BayerCustomerGet"
+CUSTOMER_HEADER="BayerCustomerHeader"
+PRODUCT_PUT="BayerProductPut"
+
+ID_RESPONSE_CUSTOMER_GET="{^CUSTOMER_GET}.Response"
+ID_RESPONSE_CUSTOMER_HEADER="{^CUSTOMER_HEADER}.Response"
+ID_RESPONSE_PRODUCT_PUT="{^PRODUCT_PUT}.Response"
+
+VAR_CUSTOMER_GET="{^CUSTOMER_GET}.Var"
+VAR_CUSTOMER_HEADER="{^CUSTOMER_HEADER}.Var"
+VAR_PRODUCT_PUT="{^PRODUCT_PUT}.Var"
+
+BODY_PRODUCT_PUT="<resource><NAME>CarSeat</NAME><PRICE>125.00</PRICE></resource>"
+
+HEADER_PRODUCT_PUT="Content-Type: text/xml"
+
+#The configuration file can be in XML or JSON format
+AUTH_MARK_SIMPLE="config\simpleauth.xml"
+#AUTH_MARK_OAUTH2="config\auth2.xml"
+AUTH_MARK_OAUTH2="config\auth2.json"
+
+PATH_ROOTFolders="rootFolders"
+
+FOLDER_GET="FolderGet"
+
+ID_RESPONSE_FOLDER_GET="{^FOLDER_GET}.Response"
+
+VAR_FOLDER_GET="{^FOLDER_GET}.Var"
+
+#The configuration file can be in XML or JSON format
+AUTH_MARK_SAS_FOLDER_OAUTH2="config\sas_folder_auth.xml"
+#AUTH_MARK_SAS_FOLDER_OAUTH2="config\sas_folder_auth.json"
+
+# User can name the window by any string, but the value of window MUST be "SAFSREST".
+# The components are the session-IDs, user can name them by any string;
+# multiple session-IDs can be defined under the same window.
+[BAYERREST]
+BAYERREST=SAFSREST
+BAYERSERVICE001=BAYERSERVICE001_DLELAEXLJREALEW
+BAYERSERVICE002=BAYERSERVICE002_FAFLAEXLJREALEWX
+
+[SASFolderREST]
+SASFolderREST=SAFSREST
+SASFolderService001=SASFolderService001_JFLWRJLAZMGHRT
+
+# "SASFolderService001" is the the session-ID of section "SASFolderREST".
+# the custom headers (files) are defined under this session-ID "SASFolderService001"
+# the custom auth files are defined under this session-ID "SASFolderService001"
+[SASFolderService001]
+FolderServiceHeader=Content-Type: application/vnd.sas.collection+json;charset=UTF-8 \r\n Accept: application/vnd.sas.collection+json
+FolderServiceHeaderFile=config\safsfolderservice001_custom_header.txt
+AuthFile=config\sas_folder_auth.xml

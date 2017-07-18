@@ -3,3 +3,8 @@
 
 # folder holding generated class files
 /bin
+
+#Ignore some private data
+config/sas_folder_auth.json
+config/sas_folder_auth.xml
+Maps/PrivateData.map

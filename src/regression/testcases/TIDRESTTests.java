@@ -8,9 +8,6 @@ import org.safs.StringUtils;
 import org.safs.persist.PersistenceType;
 import org.safs.rest.service.Request;
 import org.safs.rest.service.Response;
-import org.safs.rest.service.Service;
-import org.safs.rest.service.Services;
-import org.safs.selenium.webdriver.lib.SeleniumPlusException;
 import org.safs.text.FileUtilities.FileType;
 
 import regression.Map;
@@ -50,15 +47,6 @@ public class TIDRESTTests extends Regression{
 		return fail;
 	}
 
-	//Temporarily setting the proxy, which should be configured in the .ini file. Once done, this method
-	//will be not useful anymore, and can be deleted.
-	//TODO This method is to be removed
-	private static void setServiceProxy(org.safs.model.Component component) throws SeleniumPlusException{
-		String sessionID = Misc.GetAppMapValue(component, "", "false");
-		Service service = Services.getService(sessionID);
-		service.setProxyServerURL("proxy.server:port");
-	}
-
 	private static final String[] responseSuffixes = (new Response()).getPersitableFields().values().toArray(new String[0]);
 	private static final String[] requestSuffixes = (new Request()).getPersitableFields().values().toArray(new String[0]);
 
@@ -96,9 +84,6 @@ public class TIDRESTTests extends Regression{
 			try{
 
 				if(Rest.StartServiceSession(Map.BAYERREST.BAYERSERVICE001, quote(Map.URL_BAYER_SQLREST())/*baseURL*/, quote(Map.AUTH_MARK_SIMPLE())/*auth info*/ )){
-					//Temporarily setting the proxy, which should be configured in the .ini file.
-					setServiceProxy(Map.BAYERREST.BAYERSERVICE001);
-
 					responseID = Map.ID_RESPONSE_CUSTOMER_GET();
 					if(Rest.GetXML(Map.BAYERREST.BAYERSERVICE001, Map.PATH_CUSTOMER(), responseID)){
 						if(!Rest.CleanResponseMap()){

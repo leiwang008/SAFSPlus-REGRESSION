@@ -7,6 +7,9 @@ payload={ "username": "MYUSERNAME", "password": "MYPASSWORD" }
 
 payload2="{ "username": "MYUSERNAME", "password": "MYPASSWORD" }"
 
+networkConditions = {"offline":false, "latency":5, "download_throughput":500000 , "upload_throughput":500000}
+
+networkConditionsSlow = {"offline":false, "latency":5, "download_throughput":5000 , "upload_throughput":5000}
 
 # Window and Component definitions are added below.
 # Example:
@@ -18,3 +21,6 @@ payload2="{ "username": "MYUSERNAME", "password": "MYPASSWORD" }"
 # Refer to the SearchObject link below for info on recognition string formats:
 # 
 # http://safsdev.sourceforge.net/doc/org/safs/selenium/webdriver/lib/SearchObject.html
+
+[Google]
+Google="xpath=/html"

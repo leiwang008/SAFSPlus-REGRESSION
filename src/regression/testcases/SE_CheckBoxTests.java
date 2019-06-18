@@ -3,9 +3,13 @@ package regression.testcases;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.safs.Constants.BrowserConstants;
 import org.safs.Domains;
 import org.safs.StringUtils;
+import org.safs.Utils;
 import org.safs.model.commands.DDDriverCommands;
+import org.safs.selenium.webdriver.lib.SelectBrowser;
+import org.safs.selenium.webdriver.lib.WDLibrary;
 
 import regression.Map;
 import regression.testruns.Regression;
@@ -23,7 +27,7 @@ public class SE_CheckBoxTests extends Regression{
 	 * TestBrowserName="firefox"
 	 * ;TestBrowserName="firefox chrome explorer"
 	 * </pre>
-	 * 
+	 *
 	 * @return int, the number of error occurs
 	 * @throws Throwable
 	 */
@@ -44,18 +48,22 @@ public class SE_CheckBoxTests extends Regression{
 			if(Domains.isHtmlEnabled()) fail += testAPIForHtml(counterID, browser);
 			if(Domains.isDojoEnabled()) fail += testAPIForDojo(counterID, browser);
 			if(Domains.isSapEnabled()) fail+= testAPIForSAP(counterID, browser);
+
+			if(SelectBrowser.BROWSER_NAME_CHROME.equalsIgnoreCase(browser)){
+				testNetworkControl(counterID, browser);
+			}
 		}
 
 		Counters.StopCounter(counterID);
 		Counters.StoreCounterInfo(counterID, counterID);
 		Counters.LogCounterInfo(counterID);
-		
+
 		if(fail > 0){
 			Logging.LogTestFailure(counterID + " reports "+ fail +" UNEXPECTED test failures!");
 		}else{
 			Logging.LogTestSuccess(counterID + " did not report any UNEXPECTED test failures!");
 		}
-		
+
 		return fail;
 	}
 
@@ -81,7 +89,7 @@ public class SE_CheckBoxTests extends Regression{
 		}else{
 			Logging.LogTestSuccess(counterID + " did not report any UNEXPECTED test failures!");
 		}
-		
+
 		return fail;
 	}
 
@@ -101,13 +109,13 @@ public class SE_CheckBoxTests extends Regression{
 		Counters.StopCounter(counterID);
 		Counters.StoreCounterInfo(counterID, counterID);
 		Counters.LogCounterInfo(counterID);
-		
+
 		if(fail > 0){
 			Logging.LogTestFailure(counterID + " reports "+ fail +" UNEXPECTED test failures!");
 		}else{
 			Logging.LogTestSuccess(counterID + " did not report any UNEXPECTED test failures!");
 		}
-		
+
 		return fail;
 	}
 
@@ -145,7 +153,7 @@ public class SE_CheckBoxTests extends Regression{
 		}else{
 			trace(++fail);
 			Logging.LogTestFailure(counterID+"Fail to load map '"+mapID+"', cannot test in browser '"+browser+"'!");
-		}		
+		}
 
 		Counters.StopCounter(counterID);
 		Counters.StoreCounterInfo(counterID, counterID);
@@ -156,7 +164,72 @@ public class SE_CheckBoxTests extends Regression{
 		}else{
 			Logging.LogTestSuccess(counterID + " did not report any UNEXPECTED test failures!");
 		}
-		
+
+		return fail;
+	}
+
+	@SuppressWarnings("rawtypes")
+	private static int testNetworkControl(String counterPrefix, String browser) throws Throwable{
+		int fail = 0;
+		String counterID = Regression.generateCounterID(counterPrefix, StringUtils.getMethodName(0, false));
+		Counters.StartCounter(counterID);
+
+		String ID = null;
+
+		try{
+			String URL = Map.GoogleURL();
+			String fastNetwork = Map.networkConditions();
+			String slowNetwork = Map.networkConditionsSlow();
+			String networkResult = null;
+			ID = startBrowser(browser, URL, BrowserConstants.KEY_SET_NETWORK_CONDITIONS, fastNetwork);
+			if(ID!=null){
+				networkResult = DriverCommand.GetNetworkConditions();
+				java.util.Map networkConditionsBench = Utils.fromJsonString(fastNetwork, java.util.Map.class);
+				java.util.Map networkConditions = Utils.fromJsonString(networkResult, java.util.Map.class);
+
+				if(!networkConditionsBench.equals(networkConditions)){
+					Logging.LogTestWarning(counterID+"networkConditions '"+networkResult+"' doesn't equal to networkConditionsBench '"+fastNetwork+"'");
+					trace(++fail);
+				}
+
+				//Delete the initial 'network condition'.
+				if(!DriverCommand.DeleteNetworkConditions()) trace(++fail);
+				if(DriverCommand.GetNetworkConditions()!=null) trace(++fail);
+
+				//Switch to a slow connection
+				if(!DriverCommand.SetNetworkConditions(slowNetwork)) trace(++fail);
+				networkResult = DriverCommand.GetNetworkConditions();
+				networkConditionsBench = Utils.fromJsonString(slowNetwork, java.util.Map.class);
+				networkConditions = Utils.fromJsonString(networkResult, java.util.Map.class);
+
+				if(!networkConditionsBench.equals(networkConditions)){
+					Logging.LogTestWarning(counterID+"networkConditionsSlow '"+networkResult+"' doesn't equal to networkConditionsBench '"+slowNetwork+"'");
+					trace(++fail);
+				}
+
+				//Open the same url again, We will see that it is slower than the first time.
+				WDLibrary.getWebDriver().get(URL);
+			}else{
+				Logging.LogTestWarning(counterID+"StartWebBrowser '"+browser+"' Unsuccessful.");
+				trace(++fail);
+			}
+		}catch(Exception e){
+			trace(++fail);
+			Logging.LogTestFailure(counterID+"Fail to test SAP Application in browser '"+browser+"'! Unexpected Exception "+StringUtils.debugmsg(e));
+		}finally{
+			if(ID!=null) if(!StopWebBrowser(ID)) trace(++fail);
+		}
+
+		Counters.StopCounter(counterID);
+		Counters.StoreCounterInfo(counterID, counterID);
+		Counters.LogCounterInfo(counterID);
+
+		if(fail > 0){
+			Logging.LogTestFailure(counterID + " reports "+ fail +" UNEXPECTED test failures!");
+		}else{
+			Logging.LogTestSuccess(counterID + " did not report any UNEXPECTED test failures!");
+		}
+
 		return fail;
 	}
 
@@ -173,12 +246,12 @@ public class SE_CheckBoxTests extends Regression{
 		Counters.StopCounter(counterID);
 		Counters.StoreCounterInfo(counterID, counterID);
 		Counters.LogCounterInfo(counterID);
-		
+
 		return fail;
 	}
 
 	/**
-	 * 
+	 *
 	 * @return
 	 * @throws Throwable
 	 */
@@ -188,7 +261,7 @@ public class SE_CheckBoxTests extends Regression{
 
 		try{
 			Runner.command(DDDriverCommands.USESELENIUMFUNCTIONS_KEYWORD, "ON");
-			
+
 			for(String domain: enabledDomains) Domains.enableDomain(domain);
 			fail += testAPI(COUNTER);
 
@@ -209,6 +282,7 @@ public class SE_CheckBoxTests extends Regression{
 		return fail;
 	}
 
+	@Override
 	public void runTest() throws Throwable{
 		List<String> enabledDomains = new ArrayList<String>();
 		enabledDomains.add(Domains.HTML_SAP_DOMAIN);
